@@ -541,7 +541,7 @@ def __create_semantic_head(pyramid_dict,
                     dtype=K.floatx(),
                     name='semantic_{}'.format(semantic_id))(x)
     else:
-        x = Activation('relu',
+        x = Activation('sigmoid',
                        dtype=K.floatx(),
                        name='semantic_{}'.format(semantic_id))(x)
 
