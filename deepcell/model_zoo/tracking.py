@@ -46,8 +46,12 @@ from tensorflow.keras.layers import Activation, Softmax
 from tensorflow.keras.layers import LayerNormalization, BatchNormalization, Lambda
 from tensorflow.keras.regularizers import l2
 
-from spektral.layers import GCSConv, GCNConv, GATConv
-
+#from spektral.layers import GCSConv, GCNConv, GATConv
+def none_func(**kwargs):
+    return None
+GCSConv = none_func
+GCNConv = none_func
+GATConv = none_func
 from deepcell.layers import ImageNormalization2D
 from deepcell.layers import Comparison, DeltaReshape, Unmerge, TemporalMerge
 
